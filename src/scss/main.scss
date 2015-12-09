@@ -1,0 +1,28 @@
+$red-colr : #f00;
+$bg-boxes : #666;
+$text-color: #fff;
+$basic-padding: 20px;
+
+@mixin clear {
+	&:after {
+		content: '';
+		clear: both;
+		display: table;
+	}
+}
+
+
+.box {
+	padding: $basic-padding;
+	background: $bg-boxes;
+	color: $text-color;
+
+	ul {
+		@include clear;
+		
+		li {
+			float: left;
+			width: 30%;
+		}
+	}
+}

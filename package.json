@@ -1,0 +1,12 @@
+{
+  "name": "test_project",
+  "version": "1.0.0",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.0"
+  },
+  "main": "gulpfife.js",
+  "description": ""
+}

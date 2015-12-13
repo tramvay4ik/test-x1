@@ -30,3 +30,16 @@ $ npm install --save-dev
 ```
 $ bower install
 ```
+* For buld this project you can run in console:
+
+1. `gulp` - to compile all files (.scss, icons, .js) into build folder
+2. `gulp scc` - compile only .scss files
+3. `gulp js` - move bootstrap.min.js to exact folder
+4. `gulp icons` - move icons to exact folder
+5. `gulp watch` - will watch changes at .scss files and automatically recompile them into .css
+
+* Open index.html file in your browser from build folder
+
+## What's included
+
+

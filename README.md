@@ -25,8 +25,8 @@ you should run this command:
 ```
 $ npm install --save-dev
 ```
-* Then install Bower
+* Install packages with bower install. Bower installs packages to bower_components/.
 
 ```
-$ npm install --save-dev
+$ bower install
 ```

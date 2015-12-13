@@ -42,4 +42,19 @@ $ bower install
 
 ## What's included
 
+```
+test-x1/
 
+├── build/
+│   └── index.html
+├── src/
+│   └── scss
+│		├── main.scss
+│		├── _customMixins.scss
+│		└── _customVariables.scss	
+│
+├── bower.json
+├── gulpfile.js
+└── package.json
+
+```

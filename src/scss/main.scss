@@ -1,28 +1,311 @@
-$red-colr : #f00;
-$bg-boxes : #666;
-$text-color: #fff;
-$basic-padding: 20px;
+@import url(https://fonts.googleapis.com/css?family=Questrial);
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
 
-@mixin clear {
-	&:after {
-		content: '';
-		clear: both;
-		display: table;
+@import "_customVariables";
+@import "_customMixins";
+@import "bootstrap";
+@import "font-awesome";
+
+html{
+	font-size: 20px;
+
+	@include breakpoint($screen-lg) {
+		font-size: 18px;
+	}
+	@include breakpoint($screen-md) {
+		font-size: 16px;
+	}
+	@include breakpoint($screen-sm) {
+		font-size: 14px;
+	}
+	@include breakpoint($screen-xs) {
+		font-size: 12px;
+	}
+}
+body{
+	min-width:320px;
+}
+#wrapper{
+	padding-top: 5.5rem;
+	padding-bottom: 5.5rem;
+	max-width:1170px;
+
+	@include breakpoint($screen-xs) {
+		padding: 15px;
+	}
+}
+.aside{
+	padding-right: 0;
+
+	@include breakpoint($screen-sm - 1) {
+		padding-right: 15px;
+	}
+}
+.content{
+	padding-left: 0;
+	@include clear;
+	padding-top: 3.5rem;
+
+	@include breakpoint($screen-sm - 1) {
+		padding-left: 15px;
+		padding-top: 0;
+	}
+}
+.content-holder{
+	background: $color-blue;
+	box-shadow:$box-shadow-large;
+}
+
+.tabs-menu{
+	background: $color-gray;
+	padding-top: 1.2rem;
+	padding-bottom: 4rem;
+	box-shadow:$box-shadow-large;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 0 rgba(255,255,255,0.1);
+
+	@include breakpoint($screen-sm - 1) {
+		padding-top:0;
+		padding-bottom:0;
+		@include clear;
+	}
+
+	.navbar-toggle{
+		background:$color-white;
+		color: $color-gray;
+
+		.icon-bar{
+			background: $color-gray;
+		}
+	}
+
+	ul{
+		@include list-style;
+		font-size: 1rem;
+		line-height: 1.2;
+
+		li{
+			z-index: 10;
+			position: relative;
+		}
+		
+		a{
+			display: block;
+			padding: 1.5rem 1rem 1.5rem 4rem;
+			color: $gray-lighter;
+
+			@include breakpoint($screen-md) {
+				padding: 1.5rem 1rem 1.5rem 3rem;
+			}
+
+			&:hover{
+				color: $gray-dark;
+				background: $color-white;
+				border-left: 0.6rem solid $color-blue;
+				margin: 0 0 0 -0.6rem;
+				box-shadow:$box-shadow-large;
+				text-decoration: none;
+
+				@include breakpoint($screen-sm - 1) {
+					margin: 0;
+					padding-left: 2.4rem;
+				}
+
+			}
+		}
+		.active a{
+			color: $gray-dark;
+			background: $color-white;
+			border-left: 0.6rem solid $color-blue;
+			box-shadow:$box-shadow-large;
+			margin: 0 0 0 -0.6rem;
+			text-decoration: none;
+
+			@include breakpoint($screen-sm - 1) {
+				margin: 0;
+				padding-left: 2.4rem;
+			}
+		}
+	}
+}
+#tab-list{
+	padding: 0;
+}
+.tab-content{
+	background:$color-white;
+	box-shadow:$box-shadow-large;
+	margin: -4.5rem 1.25rem 0 -1.25rem;
+	float: left;
+	width: 100%;
+	min-height: 27rem;
+
+	@include breakpoint($screen-sm - 1) {
+		margin: 0;
 	}
 }
 
+.tabs-holder{
+	width: 100%;
+	@include clear;
+}
+.tab-pane{
+	padding: 2.5rem 5rem 2.5rem 4rem;
 
-.box {
-	padding: $basic-padding;
-	background: $bg-boxes;
-	color: $text-color;
+	@include breakpoint($screen-sm) {
+		padding:  2.5rem;
+	}
+	@include breakpoint($screen-xs) {
+		padding: 15px;
+	}
+}
 
-	ul {
-		@include clear;
-		
-		li {
-			float: left;
-			width: 30%;
+.contact-list{
+	@include list-style;
+	padding: 2rem 0 1.5rem;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1rem;
+	line-height: 1.2;
+
+	li{
+		display: inline-block;
+		vertical-align: top;
+		padding: 0  0.5rem 0.5rem;
+
+		@include breakpoint($screen-md) {
+			padding: 0 15px 0.5rem;
 		}
+
+		a{
+			color: $color-white;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		.fa{
+			margin-right: 10px;
+			font-size: 1.4rem;
+			vertical-align: bottom;
+		}
+	}
+}
+form{
+	max-width: 275px;
+	font-family: $font-family-forms;
+
+	@include breakpoint($screen-sm) {
+		max-width: none;
+	}
+}
+form label{
+	font-weight: normal;
+}
+form label.mark{
+	background: none;
+	padding: 0;
+	color: $color-blue;
+}
+.form-control{
+	font: 500 14px/18px $font-family-forms;
+	color: $input-color-placeholder;
+	background: $color-white;
+	box-shadow: none;
+	border: none;
+	border-bottom: 1px solid $input-border;
+	height: 25px;
+	padding:3px 5px; 
+	border-radius: $border-radius-none;
+
+}
+.select-box{
+	position: relative;
+}
+.select-box:after{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 25px;
+	height: 24px;
+	background: $color-white;
+	content: '\f0d7';
+	font-size: 16px;
+	line-height: 25px;
+	text-align: center;
+	font-family: 'FontAwesome';
+	color: $gray-base;
+	pointer-events:none;
+}
+.form-group {
+    margin-bottom: 2.5rem;
+}
+.btn-submit{
+	float: right;
+	text-transform: uppercase;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	border:none; 
+}
+.custom-form .form-control{
+	font: 500 22px/26px $font-family-forms;
+	color: $input-color-placeholder;
+	background: #f8f8f8;
+	box-shadow: 1px 0 3px rgba(0, 0, 0, .15);
+	border: none;
+	height: 82px;
+	padding:28px 50px; 
+
+}
+.tab-pane form.custom-form{
+	max-width: none;
+}
+.custom-form .form-control{
+	font: 500 1.1rem/1.3rem $font-family-forms;
+	color: $input-color-placeholder;
+	background: #f8f8f8;
+	box-shadow: 1px 0 3px rgba(0, 0, 0, .15);
+	border: none;
+	height: 4.1rem;
+	padding:1.4rem 2.5rem; 
+
+}
+.custom-form .form-control-small{
+	width: 50%;
+
+	@include breakpoint($screen-md) {
+		width: 100%;
+	}
+}
+.custom-form label{
+	display: none;
+}
+.custom-form .form-group{
+	margin-bottom:1.5rem;
+}
+
+.custom-form .select-box select{
+    appearance:none;
+}
+.custom-form .select-box:after{
+	width: 3.75rem;
+	height: 4.1rem;
+	background: #38474f;
+	content: '\f107';
+	font-size: 1.5rem;
+	line-height: 4.1rem;
+	color: $color-white;
+	border-radius: 0 3px 3px 0;
+}
+.custom-form .btn-submit{
+	color: $color-white;
+	font: 500 0.95rem/1.15rem $font-family-forms;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	background: #84b262;
+	height: 3.75rem;
+	width: 50%;
+	border:none;
+	float: left;
+
+	@include breakpoint($screen-md) {
+		width: 100%;
 	}
 }

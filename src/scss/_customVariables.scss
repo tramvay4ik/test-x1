@@ -1,0 +1,35 @@
+//== Colors
+
+$color-white: #fff;
+$color-gray : #1c1e23;
+$color-blue : #3e69f6;
+
+$gray-base:              #000 !default;
+$gray-lighter:           lighten($gray-base, 80%) !default; // #ccc
+
+//** Background color for `<body>`.
+$body-bg:               #f0f0f0 !default;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  'Questrial', sans-serif !default;
+$font-family-forms: 'Roboto', sans-serif;
+
+$box-shadow-large: 30px 30px 60px rgba(1,1,1,0.4);
+
+
+//== Forms
+//
+//##
+
+//** `<input>` border color
+$input-border:                   #dadada !default;
+
+//** Placeholder text color
+$input-color-placeholder:        #a6a6ad !default;
+
+$border-radius-none:		0;
+$border-radius-base:        3px !default;

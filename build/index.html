@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Test Task</title>
+
+    <!-- Bootstrap -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container-fluid" id="wrapper">
+        <div class="row">
+            <div class="col-sm-4 aside">
+                <div class="tabs-menu">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tab-list" aria-expanded="false">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Nav tabs -->
+                    <div class="collapse navbar-collapse" id="tab-list">
+                        <ul>
+                            <li class="active"><a href="#basics" data-toggle="tab">Basics</a></li>
+                            <li><a href="#plans" data-toggle="tab">Plans</a></li>
+                            <li><a href="#account" data-toggle="tab">Account &amp; biling</a></li>
+                            <li><a href="#exp_plans" data-toggle="tab">Expansion plans</a></li>
+                            <li><a href="#polices" data-toggle="tab">Polices</a></li>
+                            <li><a href="#businesses" data-toggle="tab">Small businesses</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8 content">
+                <div class="content-holder">
+                    <div class="tabs-holder">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="basics">
+                                <form class="custom-form">
+                                    <div class="form-group">
+                                        <label for="full_name">Email address</label>
+                                        <input type="email" class="form-control" id="full_name" placeholder="Full Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Select a Country</label>
+                                        <div class="select-box">
+                                            <select class="form-control">
+                                                <option>Select a Country</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postcode">Postcode / Zip</label>
+                                        <input type="text" class="form-control form-control-small" id="postcode" placeholder="Postcode / Zip">
+                                    </div>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <button type="submit" class="btn btn-default btn-submit">Next  -  your order</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="plans">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" class="form-control" id="city" placeholder="Mountain View">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mark">State</label>
+                                        <div class="select-box">
+                                            <select class="form-control">
+                                                <option>CA</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postal-code">Postal Code</label>
+                                        <input type="text" class="form-control form-control-small" id="postal-code" placeholder="94043">
+                                    </div>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <button type="submit" class="btn btn-default btn-submit">Button</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="account">
+                               <form>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" class="form-control" id="city" placeholder="Mountain View">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mark">State</label>
+                                        <div class="select-box">
+                                            <select class="form-control">
+                                                <option>CA</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postal-code">Postal Code</label>
+                                        <input type="text" class="form-control form-control-small" id="postal-code" placeholder="94043">
+                                    </div>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <button type="submit" class="btn btn-default btn-submit">Button</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="exp_plans">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" class="form-control" id="city" placeholder="Mountain View">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="mark">State</label>
+                                        <div class="select-box">
+                                            <select class="form-control">
+                                                <option>CA</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="postal-code">Postal Code</label>
+                                        <input type="text" class="form-control form-control-small" id="postal-code" placeholder="94043">
+                                    </div>
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <button type="submit" class="btn btn-default btn-submit">Button</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane" id="polices"></div>
+                            <div class="tab-pane" id="businesses"></div>
+                        </div>
+                    </div>
+                    
+                    <ul class="contact-list">
+                        <li><a href="#"><span class="fa fa-phone"></span> Call us</a></li>
+                        <li><a href="#"><span class="fa fa-wechat"></span> Chat with us</a></li>
+                        <li><a href="#"><span class="fa fa-envelope-o"></span> Email us</a></li>
+                        <li><a href="#"><span class="fa fa-group"></span> Community</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
